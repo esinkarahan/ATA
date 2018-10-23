@@ -78,11 +78,12 @@ Folowing steps are followed. All MATLAB functions and bash scripts are provided.
 - statFunctList
   - statPalmImageCluster_CSV_TFCE.m
   - statPalmImageCluster_findSignificant.m
-    - plotRegTract.m
-    - statMapCorrSkel2GroupIm.m 
-      
-      Note that: Any image viewer can be used to visualize the significant segments of the tracts
+  	- plotRegTract.m
+  - statMapCorrSkel2GroupIm.m 
+   	 
+    Note that: Any image viewer can be used to visualize the significant segments of the tracts
 		- findIgnoranceColumns.m
+
 -**Partial Correlation	on the whole tract**
    - statPartialCorrWholeTract.m
 

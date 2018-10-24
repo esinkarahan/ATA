@@ -2,10 +2,13 @@ This repository contains the codes created or used for the analysis in the paper
 
 For more information on the codes, please contact: esin.karahan@gmail.com
 
-
 web: https://ccbrain.org/
 
-Folowing steps are followed. All MATLAB functions and bash scripts are provided. 
+The pipeline is shown as:
+
+! [pipeline.] (https://github.com/esinkarahan/Microstructure_SRT_Analysis/blob/master/pipelineTractVolSkel.png)
+
+Following steps correspond to the order in the pipeline. All MATLAB functions and bash scripts are provided. 
 
 1. Preprocessing of DWI files 
 

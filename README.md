@@ -6,7 +6,8 @@ web: https://ccbrain.org/
 
 The pipeline is shown as:
 
-![pipeline.](esinkarahan.github.com/Microstructure_SRT_Analysis/blob/master/pipelineTractVolSkel.png)
+![pipeline](https://raw.githubusercontent.com/esinkarahan/Microstructure_SRT_Analysis/master/pipelineTractVolSkel.png)
+
 
 Following steps correspond to the order in the pipeline. All MATLAB functions and bash scripts are provided. 
 

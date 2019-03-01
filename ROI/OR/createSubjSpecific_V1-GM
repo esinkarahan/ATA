@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Prepare subject specific V1 GM maps for the Target Maps of OR
+# FAST segmentation on the T1 images 
+# For registration us the transformation created for ProbTrackx2 analysis
+# Multiply with the V1 maps
+
+# Written by Esin Karahan, March 2018
+
+rootdir="/Desktop/SampleAnalysis" 
+
+dtidir=${rootdir}/Data/dti
+tractdir=${rootdir}/Data/probtrackx
+maskdir=$tractdir/mask/OR/and
+outmaskdir=$tractdir/mask/OR/and/subjV1GM
+
+subjs=`cat $rootdir/subjectList.txt`
+
+for ss in ${subjs}
+do
+	echo "creating V1 map of subject $ss"
+	sd=$dtidir/$ss
+	# multiply with the GM mask
+	# Left
+	fslmaths ${sd}/"$ss"_seg_1_2_standard_nonlinear -mul ${maskdir}/Juelich-V1-L-prob-2mm ${outmaskdir}/"$ss"_Juelich-V1-L-2mm
+	# Right
+	fslmaths ${sd}/"$ss"_seg_1_2_standard_nonlinear -mul ${maskdir}/Juelich-V1-R-prob-2mm ${outmaskdir}/"$ss"_Juelich-V1-R-2mm
+done

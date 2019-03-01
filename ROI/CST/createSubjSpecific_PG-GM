@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Prepare subject specific Precentral gyrus (PG) GM maps for the Target Maps of CST
+# FAST segmentation on the T1 images 
+# For registration use the transformation created for ProbTrackx2 analysis
+# Multiply with the PG maps
+
+# Written by Esin Karahan, March 2018
+
+rootdir="/Desktop/SampleAnalysis" 
+
+dtidir=${rootdir}/Data/dti
+tractdir=${rootdir}/Data/probtrackx
+maskdir=$tractdir/mask/CST/and
+outmaskdir=$tractdir/mask/CST/and/subjPGGM
+
+subjs=`cat $rootdir/subjectList.txt`
+
+for ss in ${subjs}
+do
+	echo "creating V1 map of subject $ss"
+	sd=$dtidir/$ss
+	# multiply with the GM mask
+	# Left
+	fslmaths ${sd}/"$ss"_seg_1_2_standard_nonlinear -mul ${maskdir}/Precentral-Gyrus-L ${outmaskdir}/"$ss"_Precentral-Gyrus-L
+	# Right
+	fslmaths ${sd}/"$ss"_seg_1_2_standard_nonlinear -mul ${maskdir}/Precentral-Gyrus-R ${outmaskdir}/"$ss"_Precentral-Gyrus-R
+done

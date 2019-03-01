@@ -4,7 +4,7 @@
 
 # Written by Esin Karahan, March 2018
 
-rootdir="/home/sapek5/Desktop/SampleAnalysis" 
+rootdir="/Desktop/SampleAnalysis" 
 datadir=${rootdir}/"Data"
 T1dir=${rootdir}/Data/T1
 dtidir=${rootdir}/Data/dti

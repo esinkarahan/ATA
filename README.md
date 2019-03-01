@@ -1,4 +1,4 @@
-This repository contains the codes created or used for the analysis in the paper (under preperation) "White matter microstructure along the primary motor and sensory pathways contribute to reaction speed variations in humans"
+This repository contains the codes created or used for the analysis in the paper (under review) "White matter microstructure along the primary motor and sensory pathways contribute to reaction speed variations in humans"
 
 For more information on the codes, please contact: esin.karahan@gmail.com
 
@@ -23,6 +23,8 @@ Following steps correspond to the order in the pipeline. All MATLAB functions an
 4. Probabilistic Tractography
 
 	 FSL tools (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide#PROBTRACKX_-_probabilistic_tracking_with_crossing_fibres)
+   - Seed, waypoint and target masks to generate Corticospinal tracts, Optic radiations and Cingulum Bundles are given in the ROI folder. The scripts to generate subject-soecific ROIs are given in the Bash folder.
+
 5. Group mask
 
     - call_createGroupProbImage.m

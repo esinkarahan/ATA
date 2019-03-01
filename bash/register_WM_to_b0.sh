@@ -4,14 +4,13 @@
 
 # Written by Esin Karahan, March 2018
 
-rootdir="/home/sapek5/Desktop/SampleAnalysis" 
+rootdir="/Desktop/SampleAnalysis" 
 
-datadir=${rootdir}/"Data"
 dtidir=${rootdir}/Data/dti
 tractdir=${rootdir}/Data/probtrackx
 
 # write the subjects name here
-subjs=`cat ${datadir}/subjectList.txt`
+subjs=`cat ${rootdir}/subjectList.txt`
 
 # T1 --> White matter
 for ss in ${subjs}

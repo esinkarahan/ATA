@@ -1,4 +1,6 @@
-This repository contains the codes created or used for the analysis in the paper (under review) "White matter microstructure along the primary motor and sensory pathways contribute to reaction speed variations in humans"
+This repository contains the codes created or used for the analysis in the paper "Cognitive and White-Matter Compartment Models Reveal Selective Relations between Corticospinal Tract Microstructure and Simple Reaction Time"
+
+DOI: https://doi.org/10.1523/JNEUROSCI.2954-18.2019
 
 For more information on the codes, please contact: esin.karahan@gmail.com
 

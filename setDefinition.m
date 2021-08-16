@@ -8,6 +8,7 @@ defn.regMethod  = 'Nonlinear';
 defn.dti        = {'meanFA','meanMD','weightFA','weightMD'};
 defn.con        = {'rt_age','t0_age'};
 defn.behav      = {'RT','T0','Age'};
+defn.sign       = {'positive','negative'};
 defn.minVoxSeg  = 2;  %we expect each subject have at least 2 voxels in each segment
 defn.thrFA      = 0.2;
 

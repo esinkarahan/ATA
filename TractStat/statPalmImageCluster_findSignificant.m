@@ -26,7 +26,7 @@ ext = '.csv';
 stat_type = 'dat';
 
 for idt = 1:ndti
-    outdir = fullfile(defn.statdir,['minVox' num2str(defn.minVoxSeg)],defn.bval,[defn.dti{idt} '-' defn.bval]);
+    outdir = fullfile(statFol,defn.bval,[defn.dti{idt} '-' defn.bval]);
     for itr = 1:ntr
         for  idd = 1:ndir
             for icon = 1:ncon
@@ -78,7 +78,7 @@ for idt = 1:ndti
         end
     end
 end
-save(fullfile(defn.statdir,['minVox' num2str(defn.minVoxSeg)],bval_fa,['stat-' defn.noddi '-' defn.addsmooth '-' num2str(npiece) '-' bval_fa '-' defn.con{1} '-' stat_type '.mat']),'fwevalcluster','fdr','pval','tstat','cope');
+save(fullfile(statFol,bval_fa,['stat-' defn.noddi '-' defn.addsmooth '-' num2str(npiece) '-' bval_fa '-' defn.con{1} '-' stat_type '.mat']),'fwevalcluster','fdr','pval','tstat','cope');
 if sum(strcmp(defn.con,'rs_age')) %Raven score
     behavSel = 1;
 else % RT, T0
